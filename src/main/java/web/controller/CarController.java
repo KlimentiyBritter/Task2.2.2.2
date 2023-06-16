@@ -19,22 +19,22 @@ import java.util.Arrays;
 @RequestMapping("/cars")
 public class CarController {
 
-    private CarDao card;
+    private CarDao getByCount;
     @Autowired
     public CarController(CarDao cad){
-        this.card = card;
+        this.getByCount = getByCount;
     }
     @GetMapping
     public String show (Model model){
         //Получаем все машины
-        model.addAttribute("allCars", card.show());
+        model.addAttribute("allCars", getByCount.show());
         return "cars/all";
     }
 
     @GetMapping("/{value}")
     public String request(@PathVariable("count") int count, Model model){
         //Получаем часть машин
-        model.addAttribute("cars", card.request(count));
+        model.addAttribute("cars", getByCount.request(count));
         return "cars/array";
     }
 }
