@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>cars</title>
+        th:href="@{/css/style.css"/>
+    </head>
+<body>
+<div>
+    <th:block th:each="msg : ${cars}">
+        <h1 th:text="${msg}"></h1>
+    </th:block>
+</div>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Table of Cars</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h3> Table of Cars</h3>-->
+<!--<hr>-->
+<!--<table border="1">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>Model</th>-->
+<!--        <th>Colour</th>-->
+<!--        <th>Year</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="car:${car}">-->
+<!--        <td th:text="${car.model}"/>-->
+<!--        <td th:text="${car.colour}"/>-->
+<!--        <td th:text="${car.year}"/>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
